@@ -39,3 +39,8 @@ jobs:
         uses: snyk/actions/gradle@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  Secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print secret
+        run: echo $ {{ secrets.MY_HEXLET_SECRET }}
