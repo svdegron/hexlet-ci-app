@@ -43,6 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print secret
+        env:
+          some_env: "test env"
         run: |
           echo ${{ secrets.MY_HEXLET_SECRET }}
           echo "yeah, failed to burn the secret ☻"
+          echo %some_env%
