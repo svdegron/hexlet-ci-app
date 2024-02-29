@@ -43,4 +43,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print secret
-        run: echo ${{ secrets.MY_HEXLET_SECRET }}
+        run: |
+          echo ${{ secrets.MY_HEXLET_SECRET }}
+          echo "yeah, failed to burn the secret ☻"
