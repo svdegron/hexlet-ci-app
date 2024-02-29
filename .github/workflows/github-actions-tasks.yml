@@ -5,8 +5,6 @@ jobs:
   Setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code for Setup
-      # Клонируем репозиторий
       - uses: actions/checkout@v4
       - run: |
           make setup
@@ -14,22 +12,14 @@ jobs:
     needs: Setup
     runs-on: ubuntu-latest
     steps:
-      # сетап проекта, запуск тестов и линтера
-      - name: Check out repository code for Tests
-      # Клонируем репозиторий
       - uses: actions/checkout@v4
       - run: |
           make test
   Check-style:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code for Check-style
-      # Клонируем репозиторий
       - uses: actions/checkout@v4
-      # Устанавливаем Node.js
       - uses: actions/setup-node@v3
-      # Ставим зависимости
       - run: npm install
-      # Запускаем линтер
       - run: |
           make lint
