@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        env:
-          SUPER_SECRET: ${{ secrets.MY_HEXLET_SECRET }}
+      - uses: actions/setup-node@v3
+      - run: npm install
       - run: |
           make test
   Check-style:
