@@ -1,3 +1,5 @@
+[![Run tasks - homework](https://github.com/svdegron/hexlet-ci-app/actions/workflows/github-actions-tasks.yml/badge.svg)](https://github.com/svdegron/hexlet-ci-app/actions/workflows/github-actions-tasks.yml)
+
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
