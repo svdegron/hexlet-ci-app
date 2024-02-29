@@ -48,4 +48,4 @@ jobs:
         run: |
           echo ${{ secrets.MY_HEXLET_SECRET }}
           echo "yeah, failed to burn the secret ☻"
-          echo %some_env%
+          echo ${{ env.some_env }}
