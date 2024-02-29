@@ -1,6 +1,8 @@
 name: Run tasks - homework
 run-name: ${{ github.actor }} is testing out run tasks 🍺
 on: [push]
+env:
+  GLOBAL_ENV: "global env 2"
 jobs:
   Setup:
     runs-on: ubuntu-latest
@@ -49,3 +51,4 @@ jobs:
           echo ${{ secrets.MY_HEXLET_SECRET }}
           echo "yeah, failed to burn the secret ☻"
           echo ${{ env.some_env }}
+          echo ${{ env.GLOBAL_ENV }}
